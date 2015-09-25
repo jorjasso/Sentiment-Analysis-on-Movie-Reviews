@@ -13,7 +13,8 @@ load testFeature.mat
 load(model)
 ypred=cell(1,5);
 
-val=1:5000:65000;
+%val=1:5000:65000;
+val=1:10:100;
 kernelOption=2
 if iter<13
     ZZ=Z(val(iter):val(iter+1)-1);

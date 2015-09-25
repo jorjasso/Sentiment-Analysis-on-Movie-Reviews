@@ -18,31 +18,31 @@
 bCell=cell(1,5); alphCell=cell(1,5); posCell=cell(1,5);
 
 for i=1:5
-    fileName=strcat(int2str(i),'modelTolstoi.mat');
+    fileName=strcat(int2str(i),'modelgauss.mat');
     load(fileName)
     b
     bCell{i}=b; alphCell{i}=alph1; posCell{i}=pos;
 end
 
-save modelTolkein.mat bCell alphCell posCell
+save modelGauss50.mat bCell alphCell posCell
 
 % usar opcion -nojvmn y -nodesktop
 
 %% batch testing
-% Testing in tolkien (termino y submeti)
-screen  -d -m matlab -nodisplay -nosplash --nojvmn -r     "batchTest(1, 'modelTolkein')";
-screen  -d -m matlab -nodisplay -nosplash --nojvmn -r     "batchTest(2,'modelTolkein')";
-screen  -d -m matlab -nodisplay -nosplash --nojvmn -r     "batchTest(3,'modelTolkein')";
-screen  -d -m matlab -nodisplay -nosplash --nojvmn -r     "batchTest(4,'modelTolkein')";
-screen  -d -m matlab -nodisplay -nosplash --nojvmn -r     "batchTest(5,'modelTolkein')";
-screen  -d -m matlab -nodisplay -nosplash --nojvmn -r     "batchTest(6,'modelTolkein')";
-screen  -d -m matlab -nodisplay -nosplash --nojvmn -r     "batchTest(7,'modelTolkein')";
-screen  -d -m matlab -nodisplay -nosplash --nojvmn -r     "batchTest(8,'modelTolkein')";
-screen  -d -m matlab -nodisplay -nosplash --nojvmn -r     "batchTest(9,'modelTolkein')";
-screen  -d -m matlab -nodisplay -nosplash --nojvmn -r     "batchTest(10,'modelTolkein')";
-screen  -d -m matlab -nodisplay -nosplash --nojvmn -r     "batchTest(11,'modelTolkein')";
-screen  -d -m matlab -nodisplay -nosplash --nojvmn -r     "batchTest(12,'modelTolkein')";
-screen  -d -m matlab -nodisplay -nosplash --nojvmn -r     "batchTest(13,'modelTolkein')";
+% Testing in tolkien 
+screen  -d -m matlab -nodisplay -nosplash --nojvmn -r     "batchTest(1, 'modelGauss50')";
+screen  -d -m matlab -nodisplay -nosplash --nojvmn -r     "batchTest(2,'modelGauss50')";
+screen  -d -m matlab -nodisplay -nosplash --nojvmn -r     "batchTest(3,'modelGauss50')";
+screen  -d -m matlab -nodisplay -nosplash --nojvmn -r     "batchTest(4,'modelGauss50')";
+screen  -d -m matlab -nodisplay -nosplash --nojvmn -r     "batchTest(5,'modelGauss50')";
+screen  -d -m matlab -nodisplay -nosplash --nojvmn -r     "batchTest(6,'modelGauss50')";
+screen  -d -m matlab -nodisplay -nosplash --nojvmn -r     "batchTest(7,'modelGauss50')";
+screen  -d -m matlab -nodisplay -nosplash --nojvmn -r     "batchTest(8,'modelGauss50')";
+screen  -d -m matlab -nodisplay -nosplash --nojvmn -r     "batchTest(9,'modelGauss50')";
+screen  -d -m matlab -nodisplay -nosplash --nojvmn -r     "batchTest(10,'modelGauss50')";
+screen  -d -m matlab -nodisplay -nosplash --nojvmn -r     "batchTest(11,'modelGauss50')";
+screen  -d -m matlab -nodisplay -nosplash --nojvmn -r     "batchTest(12,'modelGauss50')";
+screen  -d -m matlab -nodisplay -nosplash --nojvmn -r     "batchTest(13,'modelGauss50')";
 
 
 %% concatenate several cvs files
@@ -58,7 +58,6 @@ dlmwrite('submissionModelGauss.csv',out,'precision',6,'roffset',1);
 
 %% experiment info
 % testing modelTolkien N/100 in tolkien
-% testing modelGauss in inti N/???
 % training modelGauss N/50 in Gauss
 % training modelProteina N/10 in Proteina
 % Naive bayes JorgeGuevaraDíaz 	0.18408 	
